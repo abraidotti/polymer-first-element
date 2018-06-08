@@ -26,10 +26,20 @@ class IconToggle extends PolymerElement {
       toggleIcon: {
         type: String
       },
+      pressed: {
+        type: Boolean,
+        value: false,
+        notify: true,
+        reflectToAttribute: true
+      },
     };
   }
   constructor() {
     super();
+    this.addEventListener('click', this.toggle.bind(this));
+  }
+  toggle() {
+    this.pressed = !this.pressed;
   }
 }
 
