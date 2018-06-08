@@ -4,6 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0;url=demo/" />
     <title>icon-toggle</title>
+    <custom-style>
+      <style>
+        /* Define a document-wide default */
+        html {
+          --icon-toggle-outline-color: red;
+        }
+        /* Override the value specified inside demo/demo-element.js */
+        demo-element {
+          --icon-toggle-pressed-color: blue;
+        }
+        /* This rule does not work! */
+        body {
+          --icon-toggle-color: purple;
+        }
+      </style>
+    </custom-style>
   </head>
   <body>
     <!--
